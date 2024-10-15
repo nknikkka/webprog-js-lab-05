@@ -2,11 +2,12 @@ function filterArray(numbers, value) {
     const filteredNumbers = []; 
 
     for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > value) 
-            {filteredNumbers.push(numbers[i]);} }
+        if (numbers[i] > value) {
+            filteredNumbers.push(numbers[i]);
+        }
+    }
     return filteredNumbers;
 }
-
 const outputDiv = document.getElementById('output');
 const results = [
     filterArray([1, 2, 3, 4, 5], 3),
@@ -15,4 +16,5 @@ const results = [
     filterArray([12, 24, 8, 41, 76], 38),
     filterArray([12, 24, 8, 41, 76], 20)
 ];
-outputDiv.innerHTML = results.map(result => JSON.stringify(result)).join('<br>');
+
+outputDiv.innerHTML += results.map(result => `<p>${JSON.stringify(result)}</p>`).join('');
