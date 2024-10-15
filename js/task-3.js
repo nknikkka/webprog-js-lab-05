@@ -16,7 +16,6 @@ const results = [
     filterArray([12, 24, 8, 41, 76], 38),
     filterArray([12, 24, 8, 41, 76], 20)
 ];
-
 results.forEach((result, index) => {
     outputDiv.innerHTML += `<p>Результат ${index + 1}: [${result.join(", ")}]</p>`;
 });
