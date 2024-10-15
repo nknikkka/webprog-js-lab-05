@@ -8,6 +8,8 @@ function filterArray(numbers, value) {
     }
     return filteredNumbers;
 }
+
+// Визначаємо результати
 const outputDiv = document.getElementById('output');
 const results = [
     filterArray([1, 2, 3, 4, 5], 3),
@@ -17,4 +19,7 @@ const results = [
     filterArray([12, 24, 8, 41, 76], 20)
 ];
 
-outputDiv.innerHTML += results.map(result => `<p>${JSON.stringify(result)}</p>`).join('');
+// Виводимо результати в HTML
+results.forEach((result, index) => {
+    outputDiv.innerHTML += `<p>Результат ${index + 1}: [${result.join(", ")}]</p>`;
+});
