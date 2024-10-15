@@ -5,7 +5,14 @@ function slugify(title) {
         .join('-');       
 }
 
-console.log(slugify("Arrays for beginners")); 
-console.log(slugify("English for developer")); 
-console.log(slugify("Ten secrets of JavaScript"));
-console.log(slugify("How to become a JUNIOR developer in TWO WEEKS")); 
+function displayResult(text) {
+    const outputDiv = document.getElementById("output");
+    const p = document.createElement("p");
+    p.textContent = text;
+    outputDiv.appendChild(p);
+}
+
+displayResult(slugify("Arrays for beginners"));
+displayResult(slugify("English for developer"));
+displayResult(slugify("Ten secrets of JavaScript"));
+displayResult(slugify("How to become a JUNIOR developer in TWO WEEKS"));
